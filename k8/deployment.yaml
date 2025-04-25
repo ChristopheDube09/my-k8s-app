@@ -4,7 +4,7 @@ metadata:
   name: my-k8s-deployment
   namespace: dev
   annotations:
-      circleci.com/project-id: 545168a5-c1d1-4b79-ba0a-cce9766ab8d7
+      circleci.com/project-id: 63737856-f8cf-4409-bff2-33e2a4bf0752
   labels:
       circleci.com/component-name: my-k8s-app
       circleci.com/version: 1.0.0
@@ -23,6 +23,6 @@ spec:
     spec:
       containers:
       - name: my-container
-        image: dancegep/my-k8s-app:latest
+        image: christophedube09/my-k8s-app:latest
         ports:
         - containerPort: 3000
