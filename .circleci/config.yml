@@ -30,6 +30,10 @@ jobs:
             chmod +x ./kubectl
             mv ./kubectl /usr/local/bin/kubectl
       - run:
+          name: Configure Kubernetes Cluster
+          command: |
+            echo $KUBECONFIG_CONTENT | base64 --decode > $HOME/.kube/config
+      - run:
           name: Deploy to Kubernetes
           command: |
             kubectl set image deployment/my-k8s-deployment my-container=christophedube09/my-k8s-app:latest
