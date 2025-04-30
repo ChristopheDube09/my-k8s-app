@@ -23,5 +23,7 @@ spec:
       containers:
       - name: my-container
         image: christophedube09/my-k8s-app:dev
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
+      RestartPolicy: Always
