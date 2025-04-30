@@ -4,13 +4,12 @@ metadata:
   name: my-k8s-deployment
   namespace: qa
   annotations:
-      circleci.com/project-id: 545168a5-c1d1-4b79-ba0a-cce9766ab8d7
+      circleci.com/project-id: 63737856-f8cf-4409-bff2-33e2a4bf0752
   labels:
       circleci.com/component-name: my-k8s-app
       circleci.com/version: 1.0.0
       app: my-k8s-app
 spec:
-  replicas: 2
   selector:
     matchLabels:
       app: my-k8s-app
