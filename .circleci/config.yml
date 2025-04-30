@@ -17,11 +17,11 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
-            docker build -t christophedube09/my-k8s-app:latest .
+            docker build -t christophedube09/my-k8s-app:dev .
       - run:
           name: Push Docker Image
           command: |
-            docker push christophedube09/my-k8s-app:latest
+            docker push christophedube09/my-k8s-app:dev
 
   deploy:
     docker:
@@ -37,4 +37,4 @@ jobs:
       - run:
           name: Deploy to Kubernetes
           command: |
-            kubectl set image deployment/my-k8s-deployment my-container=christophedube09/my-k8s-app:latest
+            kubectl set image deployment/my-k8s-deployment my-container=christophedube09/my-k8s-app:dev
